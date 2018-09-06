@@ -12,8 +12,9 @@
  */
 
 #include <cstdlib>
+#include "Algorithm.h"
+#include "datafilecreator.h"
 
-using namespace std;
 
 /*
  * 

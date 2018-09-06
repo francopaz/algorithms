@@ -9,6 +9,7 @@
       <itemPath>Insertion.h</itemPath>
       <itemPath>Merge.h</itemPath>
       <itemPath>Sort.h</itemPath>
+      <itemPath>datafilecreator.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -35,15 +36,33 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../../../../../../cygwin64/bin</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
-        <compilerSet>default</compilerSet>
+        <compilerSet>Cygwin_1|Cygwin</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <cTool>
+          <incDir>
+            <pElem>../../../../../../cygwin64/bin</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>../../../../../../cygwin64/bin</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>../../../../../../cygwin64/bin</pElem>
+          </linkerAddLib>
+        </linkerTool>
       </compileType>
       <item path="Algorithm.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -62,6 +81,8 @@
       <item path="Sort.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Sort.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="datafilecreator.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -103,6 +124,8 @@
       <item path="Sort.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Sort.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="datafilecreator.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

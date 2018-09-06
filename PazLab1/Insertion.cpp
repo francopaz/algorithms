@@ -21,4 +21,24 @@ Insertion::Insertion(const Insertion& orig) {
 
 Insertion::~Insertion() {
 }
-
+Insertion::InsertionSort(vector<int> data,int n){
+    int key, j;
+    for(int i=1;i<n;i++){
+        key=data[i];
+        j=i-1;
+        while(j>=0 && data[j]>key){
+            data[j+1]=data[j];
+            j=j-1;
+        }
+        data[j+1]=key;
+    }
+    sorted=data;
+}
+Insertion::print(vector<int> data,int n){
+    for(int i=0;i<n;i++){
+        std::cout<<data[i]<<std::endl;
+    }
+}
+vector<int> Insertion::getsorted(){
+    return sorted;
+}

@@ -21,7 +21,7 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=None-Windows
+CND_PLATFORM=Cygwin_1-Windows
 CND_DLIB_EXT=dll
 CND_CONF=Debug
 CND_DISTDIR=dist
@@ -56,7 +56,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=-L../../../../../../cygwin64/bin
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -69,27 +69,27 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pazlab1.exe: ${OBJECTFILES}
 ${OBJECTDIR}/Bubble.o: Bubble.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Bubble.o Bubble.cpp
+	$(COMPILE.cc) -g -I../../../../../../cygwin64/bin -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Bubble.o Bubble.cpp
 
 ${OBJECTDIR}/Insertion.o: Insertion.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Insertion.o Insertion.cpp
+	$(COMPILE.cc) -g -I../../../../../../cygwin64/bin -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Insertion.o Insertion.cpp
 
 ${OBJECTDIR}/Merge.o: Merge.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Merge.o Merge.cpp
+	$(COMPILE.cc) -g -I../../../../../../cygwin64/bin -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Merge.o Merge.cpp
 
 ${OBJECTDIR}/Sort.o: Sort.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sort.o Sort.cpp
+	$(COMPILE.cc) -g -I../../../../../../cygwin64/bin -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sort.o Sort.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -I../../../../../../cygwin64/bin -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:

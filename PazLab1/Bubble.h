@@ -13,14 +13,18 @@
 
 #ifndef BUBBLE_H
 #define BUBBLE_H
-
+#include <vector>
 class Bubble {
 public:
     Bubble();
     Bubble(const Bubble& orig);
     virtual ~Bubble();
+    void swap(int *, int *);
+    void BubbleSort(vector<int>,int);
+    void print(vector<int>,int);
+    vector<int> getsorted();
 private:
-
+    vector<int> sorted;
 };
 
 #endif /* BUBBLE_H */

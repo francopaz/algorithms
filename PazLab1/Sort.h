@@ -13,12 +13,17 @@
 
 #ifndef SORT_H
 #define SORT_H
-
+#include "Bubble.h"
+#include "Insertion.h"
+#include "Merge.h"
 class Sort {
 public:
     Sort();
     Sort(const Sort& orig);
     virtual ~Sort();
+    Bubble b;
+    Insertion i;
+    Merge m;
 private:
 
 };
