@@ -26,7 +26,7 @@ public:
     static void Insertion(vector<T> &data);
     template<typename T>
     static void Sort(vector<T> &data);
-    void Load(std::string);
+    void Load(std::string, int);
     void Execute(std::string);
     void Display();
     void Stats();
