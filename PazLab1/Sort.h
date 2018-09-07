@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-/* 
- * File:   Sort.h
- * Author: fpaz9
- *
- * Created on August 28, 2018, 7:54 PM
- */
+ /*
+  * File:   Sort.h
+  * Author: fpaz9
+  *
+  * Created on August 28, 2018, 7:54 PM
+  */
 
 #ifndef SORT_H
 #define SORT_H
@@ -18,12 +18,12 @@
 #include "Merge.h"
 class Sort {
 public:
-    Sort();
-    Sort(const Sort& orig);
-    virtual ~Sort();
-    Bubble b;
-    Insertion i;
-    Merge m;
+	Sort();
+	Sort(const Sort& orig);
+	virtual ~Sort();
+	Bubble b;
+	Insertion i;
+	Merge m;
 private:
 
 };

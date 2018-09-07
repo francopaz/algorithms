@@ -4,26 +4,26 @@
  * and open the template in the editor.
  */
 
-/* 
- * File:   Insertion.h
- * Author: fpaz9
- *
- * Created on August 28, 2018, 7:56 PM
- */
+ /*
+  * File:   Insertion.h
+  * Author: fpaz9
+  *
+  * Created on August 28, 2018, 7:56 PM
+  */
 
 #ifndef INSERTION_H
 #define INSERTION_H
 #include <vector>
 class Insertion {
 public:
-    Insertion();
-    Insertion(const Insertion& orig);
-    virtual ~Insertion();
-    void InsertionSort(vector<int>, int);
-    void print(vector<int>, int);
-    vector<int> getsorted();
+	Insertion();
+	Insertion(const Insertion& orig);
+	virtual ~Insertion();
+	void InsertionSort(std::vector<int>, int);
+	void print(std::vector<int>, int);
+	std::vector<int> getsorted();
 private:
-    vector<int> sorted;
+	std::vector<int> sorted;
 };
 
 #endif /* INSERTION_H */

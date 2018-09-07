@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-/* 
- * File:   Sort.cpp
- * Author: fpaz9
- * 
- * Created on August 28, 2018, 7:54 PM
- */
+ /*
+  * File:   Sort.cpp
+  * Author: fpaz9
+  *
+  * Created on August 28, 2018, 7:54 PM
+  */
 
 #include "Sort.h"
 
