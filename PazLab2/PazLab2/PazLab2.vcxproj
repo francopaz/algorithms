@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{6D538AA4-D6DB-4C83-B160-66EAACA603C6}</ProjectGuid>
-    <RootNamespace>PazLab1</RootNamespace>
+    <ProjectGuid>{69F1ECBA-737B-48EB-B5CA-8032FB0EE3D8}</ProjectGuid>
+    <RootNamespace>PazLab2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,20 +115,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Algorithm.h" />
-    <ClInclude Include="Bubble.h" />
-    <ClInclude Include="datafilecreator.h" />
-    <ClInclude Include="Insertion.h" />
-    <ClInclude Include="Merge.h" />
-    <ClInclude Include="searchAlgo.h" />
-    <ClInclude Include="Sort.h" />
+    <ClInclude Include="algoFactory.h" />
+    <ClInclude Include="algorithm.h" />
+    <ClInclude Include="sort.h" />
+    <ClInclude Include="sortAlgos.h" />
+    <ClInclude Include="tree.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Bubble.cpp" />
-    <ClCompile Include="Insertion.cpp" />
+    <ClCompile Include="algoFactory.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Merge.cpp" />
-    <ClCompile Include="Sort.cpp" />
+    <ClCompile Include="sort.cpp" />
+    <ClCompile Include="tree.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

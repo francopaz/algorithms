@@ -14,29 +14,36 @@
 #ifndef ALGORITHM_H
 #define ALGORITHM_H
 #include "Sort.h"
+#include <stdio.h>
 #include <vector>
 #include <chrono>
-#include <iostream>
-#include <fstream>
 #include <string>
+#include "Bubble.h"
+#include "Insertion.h"
+#include "Merge.h"
+#include "searchAlgo.h"
+enum algoType {
+	BUBBLE = 0,
+	INSERTION = 1,
+	MERGE = 2
+};
 class Algorithm {
 public:
-	void Load(std::string, int);
-	void Execute(std::string);
-	void Display();
-	void Stats();
-	std::string Select(int);
-	void Save(std::string);
-	void Configure();
-	Sort s;
-private:
-	std::ifstream inFile;
+	virtual void load(std::string)=0;
+	virtual void execute()=0;
+	virtual void display()=0;
+	virtual void stats()=0;
+	virtual void select(algoType)=0;
+	virtual void save(std::string)=0;
+	virtual void configure()=0;
+protected:
 	std::vector<int> data;
-	int datasetsize;
+	searchAlgo<int>* selectedAlgo;
+	std::string name;
 	std::string sorttype;
-	int time;
+	double time;
 };
-void Algorithm::Load(std::string filename, int datasize) {
+/*void Algorithm::Load(std::string filename, int datasize) {
 	datasetsize = datasize;
 	inFile.open(filename);
 	std::string num;
@@ -125,6 +132,6 @@ void Algorithm::Save(std::string filepath) {
 }
 void Algorithm::Configure() {
 
-}
+}*/
 #endif /* ALGORITHM_H */
 

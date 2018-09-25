@@ -14,62 +14,60 @@
 #include "Merge.h"
 #include <vector>
 #include <iostream>
-Merge::Merge() {
+template<typename T>
+Merge<T>::Merge() {
 }
-
-Merge::Merge(const Merge& orig) {
+template<typename T>
+Merge<T>::Merge(const Merge& orig) {
 }
-
-Merge::~Merge() {
+template<typename T>
+Merge<T>::~Merge() {
 }
-void Merge::merge(std::vector<int> data, int l, int m, int r) {
-	int i, j, k;
-	int n1 = m - l + 1;
-	int n2 = r - m;
-	std::vector<int> L;
-	std::vector<int> R;
-	for (i = 0; i < n1; i++)
-		L[i] = data[l + i];
-	for (j = 0; j < n2; j++)
-		R[j] = data[m + 1 + j];
-	i = 0;
-	j = 0;
-	k = l;
-	while (i < n1 && j < n2) {
-		if (L[i] <= R[j]) {
-			data[k] = L[i];
-			i++;
+template <typename T>
+std::vector<T> Merge<T>::merge(std::vector<T> right, std::vector<T> left) {
+	std::vector<T> answ;
+	while (left.size() || right.size()) {
+		if (left.size() && right.size()) {
+			if (left[0] <= right[0]) {
+				answ.push_back(left[0]);
+				left.erase(left.begin());
+			}
+			else {
+				answ.push_back(right[0]);
+				right.erase(right.begin());
+			}
 		}
-		else {
-			data[k] = R[j];
-			j++;
+		else if (left.size()) {
+			answ.insert(answ.end(), left.begin(), left.end());
+			break;
 		}
-		k++;
+		else if (right.size()) {
+			answ.insert(answ.end(), right.begin(), right.end());
+			break;
+		}
 	}
-	while (i < n1) {
-		data[k] = L[i];
-		i++;
-		k++;
-	}
-	while (j < n2) {
-		data[k] = R[j];
-		j++;
-		k++;
-	}
+	return answ;
 }
-void Merge::MergeSort(std::vector<int> data, int l, int r) {
-	if (l < r) {
-		int m = l + (r - 1) / 2;
-		MergeSort(data, l, m);
-		MergeSort(data, m + 1, r);
-		merge(data, l, m, r);
-	}
-	sorted = data;
+template<typename T>
+void Merge<T>::sort(std::vector<T>& data) {
+	if (data.size() <= 1)
+		return;
+	std::vector<T> left, right;
+	int middle = ((int)data.size() + 1) / 2;
+	left = std::vector<T>(data.begin(), data.begin() + middle);
+	right = std::vector<T>(data.begin() + middle, data.end());
+	sort(left);
+	sort(right);
+	data = merge(left, right);
 }
-void Merge::print(std::vector<int> data, int s) {
-	for (int i = 0; i < s; i++)
+template <typename T>
+void Merge<T>::print(std::vector<T>& data) {
+	for (int i = 0; i < data.size(); i++)
 		std::cout << data[i] << std::endl;
 }
-std::vector<int> Merge::getsorted() {
-	return sorted;
+template <typename T>
+void Merge<T>::swap(T* a, T* b) {
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }

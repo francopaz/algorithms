@@ -13,33 +13,31 @@
 
 #include "Insertion.h"
 #include <iostream>
-
-Insertion::Insertion() {
+template<typename T>
+Insertion<T>::Insertion() {
 }
-
-Insertion::Insertion(const Insertion& orig) {
+template <typename T>
+Insertion<T>::Insertion(const Insertion& orig) {
 }
-
-Insertion::~Insertion() {
+template <typename T>
+Insertion<T>::~Insertion() {
 }
-void Insertion::InsertionSort(std::vector<int> data, int n) {
-	int key, j;
-	for (int i = 1; i < n; i++) {
-		key = data[i];
-		j = i - 1;
-		while (j >= 0 && data[j] > key) {
-			data[j + 1] = data[j];
-			j = j - 1;
-		}
-		data[j + 1] = key;
+template <typename T>
+void Insertion<T>::sort(std::vector<T>& data) {
+	for (int i = 0; i < data.size(); i++) {
+		for (int j = i; j >0 && data[j-1]>data[j]; j--)
+			swap(&data[j], &data[j - 1]);
 	}
-	sorted = data;
 }
-void Insertion::print(std::vector<int> data, int n) {
-	for (int i = 0; i < n; i++) {
+template <typename T>
+void Insertion<T>::print(std::vector<T>& data) {
+	for (int i = 0; i < data.size(); i++) {
 		std::cout << data[i] << std::endl;
 	}
 }
-std::vector<int> Insertion::getsorted() {
-	return sorted;
+template <typename T>
+void Insertion<T>::swap(T* a, T* b) {
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }

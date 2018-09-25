@@ -14,16 +14,18 @@
 #ifndef INSERTION_H
 #define INSERTION_H
 #include <vector>
-class Insertion {
+#include <stdio.h>
+#include "searchAlgo.h"
+template <typename T>
+class Insertion : public searchAlgo<T>{
 public:
 	Insertion();
 	Insertion(const Insertion& orig);
 	virtual ~Insertion();
-	void InsertionSort(std::vector<int>, int);
-	void print(std::vector<int>, int);
-	std::vector<int> getsorted();
+	virtual void sort(std::vector<T>&);
+	virtual void swap(T*, T*);
+	virtual void print(std::vector<T>&);
 private:
-	std::vector<int> sorted;
 };
 
 #endif /* INSERTION_H */

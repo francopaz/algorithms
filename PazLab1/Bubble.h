@@ -14,15 +14,17 @@
 #ifndef BUBBLE_H
 #define BUBBLE_H
 #include <vector>
-class Bubble {
+#include <stdio.h>
+#include "searchAlgo.h"
+template <typename T>
+class Bubble : public searchAlgo<T>{
 public:
 	Bubble();
 	Bubble(const Bubble& orig);
 	virtual ~Bubble();
-	void swap(int *, int *);
-	void BubbleSort(std::vector<int>, int);
-	void print(std::vector<int>, int);
-	std::vector<int> getsorted();
+	virtual void swap(T*, T*);
+	virtual void sort(std::vector<T>&);
+	virtual void print(std::vector<T>&);
 private:
 	std::vector<int> sorted;
 };

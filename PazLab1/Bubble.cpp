@@ -13,43 +13,30 @@
 
 #include "Bubble.h"
 #include <iostream>
-
-Bubble::Bubble() {
+template <typename T>
+Bubble<T>::Bubble() {
 }
-
-Bubble::Bubble(const Bubble& orig) {
+template <typename T>
+Bubble<T>::Bubble(const Bubble& orig) {
 }
-
-Bubble::~Bubble() {
+template <typename T>
+Bubble<T>::~Bubble() {
 }
-void Bubble::BubbleSort(std::vector<int> data, int n) {
-	int i, j;
-	bool swapped;
-	for (i = 0; i < n - 1; i++) {
-		swapped = false;
-		for (j = 0; j < n - i - 1; j++)
-		{
-			if (j + 1 > n-1)
-				break;
-			if (data[j] > data[j + 1]) {
-				swap(&data[j], &data[j + 1]); //might need ampersands in front of both values
-				swapped = true;
-			}
-		}
-		if (swapped == false)
-			break;
-	}
-	sorted = data;
+template <typename T>
+void Bubble<T>::sort(std::vector<T>& data) {
+	for (int i = 0; i < data.size() - 1; i++)
+		for (int j = 0; j < data.size() - i - 1; j++)
+			if (data[j] > data[j + 1])
+				swap(&data[j], &data[j + 1]);
 }
-void Bubble::swap(int* a, int* b) {
+template <typename T>
+void Bubble<T>::swap(T* a, T* b) {
 	int temp = *a;
 	*a = *b;
 	*b = temp;
 }
-void Bubble::print(std::vector<int> data, int s) {
-	for (int i = 0; i < s; i++)
+template <typename T>
+void Bubble<T>::print(std::vector<T>& data) {
+	for (int i = 0; i < data.size(); i++)
 		std::cout << data[i] << std::endl;
-}
-std::vector<int> Bubble::getsorted() {
-	return sorted;
 }

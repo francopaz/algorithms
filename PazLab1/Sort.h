@@ -13,19 +13,26 @@
 
 #ifndef SORT_H
 #define SORT_H
+#include "Algorithm.h"
+#include "searchAlgo.h"
 #include "Bubble.h"
 #include "Insertion.h"
 #include "Merge.h"
-class Sort {
+#include <stdio.h>
+class Sort : public Algorithm{
 public:
 	Sort();
 	Sort(const Sort& orig);
 	virtual ~Sort();
-	Bubble b;
-	Insertion i;
-	Merge m;
+	void load(std::string);
+	void execute();
+	void display();
+	void stats();
+	void select(algoType);
+	void save(std::string);
+	void configure();
 private:
-
+	static searchAlgo<int>* algorithm;
 };
 
 #endif /* SORT_H */

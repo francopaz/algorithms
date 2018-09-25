@@ -14,17 +14,19 @@
 #ifndef MERGE_H
 #define MERGE_H
 #include <vector>
-class Merge {
+#include <stdio.h>
+#include "searchAlgo.h"
+template <typename T>
+class Merge : public searchAlgo<T>{
 public:
 	Merge();
 	Merge(const Merge& orig);
 	virtual ~Merge();
-	void merge(std::vector<int>, int, int, int);
-	void MergeSort(std::vector<int>, int, int);
-	void print(std::vector<int>, int);
-	std::vector<int> getsorted();
+	virtual void sort(std::vector<T>&);
+	virtual void print(std::vector<T>&);
+	virtual void swap(T*, T*);
 private:
-	std::vector<int> sorted;
+	std::vector<T> merge(std::vector<T>, std::vector<T>);
 };
 
 #endif /* MERGE_H */
