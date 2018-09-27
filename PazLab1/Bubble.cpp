@@ -12,7 +12,6 @@
   */
 
 #include "Bubble.h"
-#include <iostream>
 template <typename T>
 Bubble<T>::Bubble() {
 }

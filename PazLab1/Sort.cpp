@@ -14,7 +14,7 @@
 #include "Sort.h"
 #include <fstream>
 #include <iostream>
-#include "Algorithm.h"
+//#include "Algorithm.h"
 Sort::Sort() {
 }
 

@@ -5,4 +5,3 @@ public:
 	tree();
 	virtual ~tree();
 };
-

@@ -115,8 +115,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="A.h" />
+    <ClInclude Include="adjacencylist.h" />
+    <ClInclude Include="adjacencymatrix.h" />
     <ClInclude Include="algoFactory.h" />
     <ClInclude Include="algorithm.h" />
+    <ClInclude Include="bfsi.h" />
+    <ClInclude Include="bfsr.h" />
+    <ClInclude Include="dfsi.h" />
+    <ClInclude Include="dfsr.h" />
+    <ClInclude Include="Dijkstra.h" />
+    <ClInclude Include="doublylinkedlist.h" />
     <ClInclude Include="sort.h" />
     <ClInclude Include="sortAlgos.h" />
     <ClInclude Include="tree.h" />

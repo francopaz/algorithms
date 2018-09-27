@@ -18,9 +18,6 @@
 #include "Sort.h"
 #include "datafilecreator.h"
 
-  /*
-   *
-   */
 const std::vector<std::string> dataOrders = { "Random","Reverse","Unique","PartRand" };
 const std::vector<std::string> dataSizes = { "10.txt","1000.txt","10000.txt","100000.txt" };
 
