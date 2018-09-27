@@ -28,14 +28,26 @@ dfsi<T>::dfsi(int V) {
 }
 template<typename T>
 void dfsi<T>::addEdge(int src, int dst) {
-
+	adjLists[src].push_front(dest);
 }
 template<typename T>
 void dfsi<T>::searchList(int index) {
-
+	visited[index] = true;
+	list adjList = adjLists[index];
+	std::cout << index << " ";
+	list::iterator i;
+	for (i = adjList.begin(); i != adjList.end(); ++i)
+		if (!visited[*i])
+			searchList(*i);
 }
 template<typename T>
 void dfsi<T>::searchMatrix(int index) {
-
+	visited[index] = true;
+	list adjList = adjLists[index];
+	std::cout << index << " ";
+	list::iterator i;
+	for (i = adjList.begin(); i != adjList.end(); ++i)
+		if (!visited[*i])
+			searchMatrix(*i);
 }
 #endif // !DFSI_H

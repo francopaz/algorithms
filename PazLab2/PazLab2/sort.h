@@ -5,7 +5,7 @@
   * Created on September 20, 2018, 7:54 PM
   */
 
-#ifndef SORT_H
+/*#ifndef SORT_H
 #define SORT_H
 #include "algorithm.h"
 #include <stdio.h>

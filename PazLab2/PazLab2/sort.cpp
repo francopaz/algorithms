@@ -5,7 +5,7 @@
   * Created on September 20, 2018, 7:54 PM
   */
 
-#include "Sort.h"
+/*#include "Sort.h"
 #include <fstream>
 #include <iostream>
 #include "Algorithm.h"
@@ -78,4 +78,4 @@ void Sort::save(std::string filename) {
 }
 void Sort::configure() {
 
-}
+}*/

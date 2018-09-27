@@ -20,6 +20,10 @@ enum algoType{
 	Dijkstra = 4,
 	A = 5
 };
+enum searchType {
+	adjList = 0,
+	adjMatrix=1
+};
 class algorithm {
 public:
 	virtual void load(std::string)=0;
